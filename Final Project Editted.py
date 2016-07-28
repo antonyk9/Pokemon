@@ -25,7 +25,7 @@ def getting_info():
     role = input("What group would you like? (FIRE, WATER, GRASS)")
 
     type = ""
-    with open('C:\MySTUDENT\PokemonStarters.csv') as csvfile:
+    with open('C:/Users/kwanke/PycharmProjects/Pokemon/PokemonStarters.csv') as csvfile:
         pokemonreader = csv.reader(csvfile, delimiter=',')
         for row in pokemonreader:
 
