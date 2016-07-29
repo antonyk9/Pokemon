@@ -1,7 +1,7 @@
 import random
 import csv
 #pokemon is awesome
-#.
+#and pokemon go is super awesome
 
 class Character:
     def __init__(self, name, health, attack):
