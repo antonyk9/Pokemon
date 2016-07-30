@@ -28,31 +28,32 @@ def getting_info():
     with open('C:/Users/kwanke/PycharmProjects/Pokemon/PokemonStarters.csv') as csvfile:
         pokemonreader = csv.reader(csvfile, delimiter=',')
         for row in pokemonreader:
-
-        #print(" ".join(row))
-        #print(row[0])
             if row[2] == role:
-                if type == "":
-                    type = row[1]
-                #fire_type = input(row[1])
-                else:
-                    type =type +" " + row[1]
+                print (row[1])
 
     valid_input = False
     while valid_input == False:
-        #player = Character(type)
-        pokemon=input(type)
-        player = Character(pokemon, 8888, 1980)
+        # player = Character(type)
+        pokemon = input(type)
+        with open('C:/Users/kwanke/PycharmProjects/Pokemon/PokemonStarters.csv') as csvfile:
+            pokemonreader = csv.reader(csvfile, delimiter=',')
+            for row in pokemonreader:
+                if row[1] == pokemon:
+                    print (pokemon)
+                    print (row[4], row[5])
+                    hp = row[4]
+                    attack = row[5]
+        player = Character(pokemon, hp, attack)
         valid_input = True
         if valid_input == False:
             role = input("Please enter a valid role")
 
+        print("Hello", full_name)
+        print("Your pokemon has", player.health, "health")
+        print("Your pokemon has", player.attack, "attack")
+        print()
+        return player
 
-    print("Hello", full_name)
-    print("Your pokemon has", player.health, "health")
-    print("Your pokemon has", player.attack, "attack")
-    print()
-    return player
 
 def enemy_info():
     enemy_name = "The wild pokemon"
