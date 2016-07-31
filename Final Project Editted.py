@@ -1,7 +1,5 @@
 import random
 import csv
-#pokemon is awesome
-#and pokemon go is super awesome
 
 class Character:
     def __init__(self, name, health, attack):
@@ -13,6 +11,7 @@ class Character:
         target_character.health -= self.attack
 
     def is_alive(self):
+        #print(type(self.health))
         return self.health > 0
 
 def getting_info():
@@ -22,7 +21,7 @@ def getting_info():
     full_name = first_name
     print(full_name)
 
-    role = input("What group would you like? (FIRE, WATER, GRASS)")
+    role = input("What group would you like? (fire, water, grass)")
 
     type = ""
     with open('C:/Users/kwanke/PycharmProjects/Pokemon/PokemonStarters.csv') as csvfile:
@@ -41,26 +40,39 @@ def getting_info():
                 if row[1] == pokemon:
                     print (pokemon)
                     print (row[4], row[5])
-                    hp = row[4]
-                    attack = row[5]
+                    hp = int(row[4])
+                    attack = int(row[5])
+                if row[1] == pokemon:
+                    print(row[6])
+                    species = row[6]
+
         player = Character(pokemon, hp, attack)
         valid_input = True
         if valid_input == False:
             role = input("Please enter a valid role")
 
-        print("Hello", full_name)
-        print("Your pokemon has", player.health, "health")
-        print("Your pokemon has", player.attack, "attack")
-        print()
-        return player
+    print(" ")
+
+    print("Hello", full_name)
+    print(" ")
+    print("Professor: Welcome to the world of Pokemon")
+    print(" ")
+    print("Professor: Paul will show you around")
+    print(" ")
+    print("Paul: Nice to meet you, my name is Paul")
+    print(" ")
+    print("Paul: Let's go find some Pokemon")
+    print(" ")
+    print("Go to the grass and soon enough you will find a Pokemon")
+    print()
+    return player
 
 
 def enemy_info():
     enemy_name = "The wild pokemon"
-    enemy_health = random.randint(1000, 2100)
-    enemy_attack = random.randint(900, 1160)
+    enemy_health = random.randint(35, 70)
+    enemy_attack = random.randint(40, 80)
     enemy = Character(enemy_name, enemy_health, enemy_attack)
-    print("A wild pokemon has appeared")
     print(enemy.name, "has", enemy.health, "health")
     print(enemy.name, "has", enemy.attack, "attack")
     print()
@@ -143,12 +155,12 @@ def fight(player, enemy):
 def play_game():
     player = getting_info()
     enemy = enemy_info()
-    enemy = enemy_info()
     fight(player, enemy)
-    fight(player, enemy)
+    #print(type(player.health), (type(enemy.health)))
     while player.is_alive() and enemy.is_alive():
         player.damage(enemy)
         enemy.damage(player)
+        print(" ")
         print("You have", player.health, "health remaining")
         print("Enemy has", enemy.health, "health remaining")
         print()
@@ -162,5 +174,3 @@ def play_game():
 
 
 play_game()
-
-print("Great, you have come so far young trainer. There are alot of Pokemon out there in the world. Gotta catch them all")
