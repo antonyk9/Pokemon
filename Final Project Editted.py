@@ -53,17 +53,12 @@ def getting_info():
 
     print(" ")
 
-    print("Hello", full_name)
-    print(" ")
-    print("Professor: Welcome to the world of Pokemon")
-    print(" ")
-    print("Professor: Paul will show you around")
-    print(" ")
-    print("Paul: Nice to meet you, my name is Paul")
-    print(" ")
-    print("Paul: Let's go find some Pokemon")
-    print(" ")
-    print("Go to the grass and soon enough you will find a Pokemon")
+    test = input("Professor: Hello "+ full_name)
+    test = input("Professor: Welcome to the world of Pokemon")
+    test = input("Professor: Paul will show you around")
+    test = input("Paul: Nice to meet you, my name is Paul")
+    test = input("Paul: Let's go find some Pokemon")
+    test = input("Paul: Go to the grass and soon enough you will find a Pokemon")
     print()
     return player
 
@@ -73,8 +68,8 @@ def enemy_info():
     enemy_health = random.randint(35, 70)
     enemy_attack = random.randint(40, 80)
     enemy = Character(enemy_name, enemy_health, enemy_attack)
-    print(enemy.name, "has", enemy.health, "health")
-    print(enemy.name, "has", enemy.attack, "attack")
+    print("A wild pokemon has appeared")
+    print(enemy.name, "has", enemy.health, "health and", enemy.attack, "attack")
     print()
     return enemy
 
@@ -88,22 +83,22 @@ def fight(player, enemy):
         if role == "fire":
             print("Choose a move")
             print("1.flamethrower")
-            print("2.fire blast")
-            print("3.incinerate")
-            print("4.heat wave")
+            print("2.heat wave")
+            print("3.fire blast")
+            print("4.overheat")
 
             move_selection = int(input("Please enter a valid number from 1 - 4"))
             if move_selection == 1:
-                player = Character("flamethrower", 0, 130)
+                player = Character("flamethrower", 0, 90)
                 valid_input = True
             if move_selection == 2:
-                player = Character("fire blast", 0, 130)
+                player = Character("heat wave", 0, 95)
                 valid_input = True
             if move_selection == 3:
-                player = Character("incinerate", 0, 130)
+                player = Character("fire blast", 0, 110)
                 valid_input = True
             if move_selection == 4:
-                player = Character("heat wave", 0, 130)
+                player = Character("overheat", 0, 130)
                 valid_input = True
             if valid_input == False:
                 move_selection = int(input("Please input a valid group"))
@@ -112,20 +107,20 @@ def fight(player, enemy):
             print("1.hydro pump")
             print("2.water pulse")
             print("3.water gun")
-            print("4.aquajet")
+            print("4.water spout")
 
             move_selection = int(input("Please enter a valid number from 1 - 4"))
             if move_selection == 1:
-                player = Character("hydro pump", 0, 130)
+                player = Character("hydro pump", 0, 110)
                 valid_input = True
             if move_selection == 2:
-                player = Character("water pulse", 0, 130)
+                player = Character("water pulse", 0, 60)
                 valid_input = True
             if move_selection == 3:
-                player = Character("water gun", 0, 130)
+                player = Character("water gun", 0, 40)
                 valid_input = True
             if move_selection == 4:
-                player = Character("aquajet", 0, 130)
+                player = Character("water spout", 0, 150 )
                 valid_input = True
             if valid_input == False:
                 move_selection = int(input("Please input a valid group"))
@@ -138,16 +133,16 @@ def fight(player, enemy):
 
             move_selection = int(input("Please enter a valid number from 1 - 4"))
             if move_selection == 1:
-                player = Character("solar beam", 0, 130)
+                player = Character("solar beam", 0, 120)
                 valid_input = True
             if move_selection == 2:
-                player = Character("vine whip", 0, 130)
+                player = Character("vine whip", 0, 45)
                 valid_input = True
             if move_selection == 3:
                 player = Character("leaf storm", 0, 130)
                 valid_input = True
             if move_selection == 4:
-                player = Character("frenzy plant", 0, 130)
+                player = Character("frenzy plant", 0, 150)
                 valid_input = True
             if valid_input == False:
                 move_selection = int(input("Please input a valid group"))
