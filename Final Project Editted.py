@@ -82,23 +82,23 @@ def fight(player, enemy):
     while valid_input == False:
         if role == "fire":
             print("Choose a move")
-            print("1.flamethrower")
-            print("2.heat wave")
-            print("3.fire blast")
-            print("4.overheat")
+            print("1.tackle")
+            print("2.ember")
+            print("3.flame charge")
+            print("4.flame wheel")
 
             move_selection = int(input("Please enter a valid number from 1 - 4"))
             if move_selection == 1:
-                player = Character("flamethrower", 0, 90)
+                player = Character("tackle", 0, 50)
                 valid_input = True
             if move_selection == 2:
-                player = Character("heat wave", 0, 95)
+                player = Character("ember", 0, 45)
                 valid_input = True
             if move_selection == 3:
-                player = Character("fire blast", 0, 110)
+                player = Character("flame charge", 0, 50)
                 valid_input = True
             if move_selection == 4:
-                player = Character("overheat", 0, 130)
+                player = Character("flame wheel", 0, 60)
                 valid_input = True
             if valid_input == False:
                 move_selection = int(input("Please input a valid group"))
