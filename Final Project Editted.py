@@ -151,17 +151,22 @@ def play_game():
     player = getting_info()
     enemy = enemy_info()
     fight(player, enemy)
+    fight(enemy, player)
+    player.damage(enemy)
+    enemy.damage(player)
+    health = input(player.health)
+    health = input(enemy.health)
     #print(type(player.health), (type(enemy.health)))
     print("You have", player.health, "health remaining")
     print("Enemy has", enemy.health, "health remaining")
     print()
 
-        if player.is_alive():
-            print("You won!")
-        elif enemy.is_alive():
-            print("You lost!")
-        else:
-            print("It was a draw")
+    if player.is_alive():
+        print("You won!")
+    elif enemy.is_alive():
+        print("You lost!")
+    else:
+        print("It was a draw")
 
 
 play_game()
