@@ -29,8 +29,9 @@ else:
 enough_bread = slices_bread /2 >= num_students
 enough_cheese = slices_cheese >= num_students
 enough_ham = slices_ham >= num_students
+enough_tomatoes = slices_tomatoes >= num_students
 
-if enough_bread and enough_cheese and enough_ham:
+if enough_bread and enough_cheese and enough_ham and enough_tomatoes:
     print("Sandwiches for everyone")
 
 
