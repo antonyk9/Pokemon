@@ -11,13 +11,13 @@ class Account:
 
 
 
-accounts = []
-for i in range(0, 10):
-    name = "account" + str(i)
-    balance = random.randint(1000, 2000)
-    accounts.append(Account(name, balance))
+        accounts = []
+        for i in range(0, 10):
+            name = "account" + str(i)
+            balance = random.randint(1000, 2000)
+            accounts.append(accounts(name, balance))
 
 # deposit money
-for account in accounts:
-    account.deposit(random.randint(500, 1000))
-    print(account.balance)
+        for account in accounts:
+            account.deposit(random.randint(500, 1000))
+            print(account.balance)

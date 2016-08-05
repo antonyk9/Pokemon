@@ -78,7 +78,8 @@ def fight(player, enemy):
     print()
     valid_input = False
     role = input("What type of attack from your group? (fire, water, grass)")
-
+    if role == True:
+        print("Please enter a valid answer")
 
     while valid_input == False:
         if role == "fire":
@@ -147,6 +148,7 @@ def fight(player, enemy):
                 valid_input = True
             if valid_input == False:
                 move_selection = int(input("Please input a valid group"))
+
 
 def play_game():
     player = getting_info()

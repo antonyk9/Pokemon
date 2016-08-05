@@ -10,15 +10,18 @@ if slices_bread / 2 >= num_students:
 else:
     print("Not enough bread.")
 
-if slices_cheese >= num_students:
+
+if slices_cheese / 4 >= num_students:
     print("Enough cheese!")
 else:
     print("Not enough cheese.")
 
-if slices_ham >= num_students:
+
+if slices_ham / 2 >= num_students:
     print("Enough ham!")
 else:
     print("Not enough ham.")
+
 
 if slices_tomatoes >= num_students:
     print("Enough tomatoes!")
