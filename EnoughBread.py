@@ -1,8 +1,10 @@
+num_students = 8
+print("There are", num_students, "hungry students in the cafeteria")
+print("Help these poor kids make their sandwich")
 slices_bread = int(input("How many slices of bread?"))
 slices_cheese = int(input("How any slices of cheese?"))
 slices_ham = int(input("How many slices of ham?"))
 slices_tomatoes = int(input("How many slices of tomatoes?"))
-num_students = 8
 
 
 if slices_bread / 2 >= num_students:
